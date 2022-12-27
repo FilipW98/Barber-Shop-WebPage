@@ -1,0 +1,37 @@
+@use 'colors' as *;
+
+@mixin styledBtn {
+position: absolute;
+width: 200px;
+height: 65px;
+top: 80%;
+left: 50%;
+transform: translate(-50%, 0%);
+background-color: $brown;
+border: 2px solid rgba(0, 0, 0, 0.62);
+color: $cream-white;
+font-size: 1.5rem;
+transition: background-color .3s;
+border-radius: 10px;
+z-index: 5;
+letter-spacing: 0.3em;
+}
+
+@mixin before-after {
+    position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+
+@mixin underline-div {
+position: absolute;	
+left: 50%;
+transform: translate(-50%, 0%);
+ height: 4px; 
+ width: 40px;
+ background-color: $brown;
+}

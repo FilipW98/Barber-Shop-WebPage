@@ -1,0 +1,529 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+.contact-header {
+	.contact__hero-img {
+		background-image: url('../img/unsplash_2seUdPQNy_I.png');
+		background-size: cover;
+		background-position: center;
+		min-height: 100vh;
+
+		.hero-text {
+			.contact-underline {
+				height: 3px;
+				width: 100%;
+				background-color: white;
+			}
+		}
+	}
+}
+.contact__btn {
+	@include styledBtn;
+	width: 170px;
+	height: 55px;
+	top: 35%;
+	background-color: $dark-btn;
+	font-size: 1.2rem;
+}
+
+.contact__btn:hover {
+	background-color: black;
+	color: white;
+}
+.contact__btn::before {
+	@include before-after;
+	border-radius: 10px;
+}
+
+.contact__btn:hover::before {
+	border: 2px solid $dark-btn;
+	animation: btnBorder 1s;
+}
+
+.price-list-img{
+	display: none;
+}
+
+.contact__adress {
+	margin: 5em auto;
+
+	#map {
+		max-width: 500px;
+		height: 400px;
+		margin: 15em auto 0em;
+		border-radius: 10px;
+		box-shadow: 1px 2px 4px 1px rgb(59, 43, 19);
+	}
+
+	.contact__adress-data {
+		display: inline-block;
+		position: relative;
+		transform: translate(-50%);
+		left: 50%;
+		margin-bottom: 0em;
+		padding: 1em;
+		border-radius: 8px;
+		font-size: 1.3rem;
+		letter-spacing: 0.3em;
+		background-color: rgba(146, 112, 38, 0.651);
+		box-shadow: 1px 2px 4px 1px rgb(59, 43, 19);
+
+		.number {
+			color: $blue;
+			.fa-phone-alt {
+				transform: rotate(100deg);
+			}
+		}
+	}
+}
+
+.open-days {
+	margin: 3em auto;
+	font-size: 1.2rem;
+	letter-spacing: 0.3em;
+	width: 360px;
+	padding: 1em;
+	border-radius: 8px;
+	background-color: rgba(146, 112, 38, 0.651);
+	background-image: radial-gradient(#bb9374a8, #e9c370a9);
+	box-shadow: 1px 2px 4px 1px rgb(59, 43, 19);
+
+	.day {
+		color: $brown;
+	}
+
+	.hour {
+		font-weight: bold;
+	}
+	span {
+		color: $red;
+		font-weight: bold;
+	}
+}
+
+// CONTACT FORM ==============
+
+
+.contact__underline {
+	width: 100%;
+	background-color: rgba(124, 83, 37, 0.39);
+	height: 1px;
+	margin-bottom: 4em;
+}
+.contact__form-title {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	background-color: $dark;
+	padding: 1.5em;
+	width: 100%;
+	.contact__form-title {
+		color: $cream-white;
+		letter-spacing: 0.1em;
+	}
+	.underline {
+		@include underline-div;
+		width: 10%;
+	}
+}
+.contact__box {
+	.contact__form-title {
+		font-weight: bold;
+		letter-spacing: 0.2em;
+		margin-bottom: 2em;
+
+		.underline {
+			@include underline-div;
+			width: 10%;
+		}
+	}
+
+	.contact__form {
+		.contact__btn {
+			top: 83%;
+		}
+
+
+
+	.contact__form-item.error{
+		.labels{
+			.name-error, .email-error, .message-error, .number-error {
+				display: block;
+				color: $red;
+			}
+		 }
+	}
+
+
+		&-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			.contact__form-item-number {
+				display: flex;
+				align-items: baseline;
+			}
+
+			.labels {
+				.optional {
+					color: $dark;
+					margin-left: 0;
+					margin-bottom: 0;
+				}
+				p {
+					margin-bottom: -0.5em;
+					// color: $red;
+					margin-left: -1.5em;
+				}
+				.number-error {
+					margin-left: 1em;
+					display: none;
+				}
+				.message-error {
+					margin-left: 1em;
+					display: none;
+				}
+				
+				.name-error {
+					margin-right: -7.5em;
+					display: none;
+				}
+				
+				.email-error {
+					margin-right: -8.5em;
+					display: none;
+				}
+				
+				p {
+					font-size: 0.8rem;
+				}
+				label {
+					text-align: center;
+					letter-spacing: 0.1em;
+				}
+			}
+
+			input {
+				margin-top: 0.6em;
+				margin-bottom: 3em;
+				border-radius: 8px;
+				border: none;
+				padding: 0.3em 0.4em;
+				width: 80%;
+			}
+
+			textarea {
+				min-width: 80%;
+				padding: 0.5em;
+				margin-bottom: 9em;
+				margin-top: 0.6em;
+				border: none;
+				resize: vertical;
+				border-radius: 8px;
+			}
+		}
+	}
+}
+
+.popup__shadow {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(51, 51, 51, 0.719);
+	z-index: 100;
+}
+
+.popup {
+	position: relative;
+	width: 90%;
+	min-height: 19%;
+	left: 50%;
+	top: 30%;
+	transform: translate(-50%, -50%);
+	padding: 1em;
+	text-align: center;
+	font-size: 1.2rem;
+	background-color: $cream-white;
+	letter-spacing: 0.1em;
+	border-radius: 8px;
+	z-index: 100;
+	p {
+		margin-bottom: 0;
+		margin-top: 1em;
+	}
+	.popup__btn {
+		margin-top: 1.6em;
+		max-width: 35%;
+		min-width: 25%;
+		border-radius: 8px;
+		border: none;
+		padding: 0.3em;
+		background-color: $dark;
+		color: $cream-white;
+		transition: 0.3s;
+	}
+
+	.popup__btn:hover {
+		background-color: $dark-btn;
+		color: white;
+		transform: scale(0.9);
+	}
+	.fa-check {
+		color: rgb(66, 170, 66);
+		font-size: 1.4rem;
+	}
+}
+
+// MEDIUM=================
+
+@media (min-width: 768px) {
+	.contact-header {
+		.contact__hero-img {
+			background-image: url('../img/hero-img-contact-big.jpg');
+		}
+	}
+
+	.contact__tablets{
+		display: flex;
+		justify-content: space-evenly;
+		
+	}
+
+	.price-list-img{
+		display: block;
+		height: 222px;
+	}
+
+	.contact__adress {
+		margin-top: 7em;
+		.contact__adress-data {
+			position: static;
+			transform: translate(0%);
+		}
+
+		#map {
+			max-width: 660px;
+			height: 490px;
+		}
+
+		.contact-btn {
+			width: 190px;
+			height: 58px;
+			font-size: 1.3rem;
+		}
+	}
+
+	.open-days {
+		min-width: 420px;
+		font-size: 1.4rem;
+	}
+
+	.contact__box {
+		.contact__form {
+			&-item {
+				p {
+					font-size: 0.8rem;
+				}
+
+				input {
+					width: 60%;
+				}
+
+				textarea {
+					min-width: 60%;
+				}
+			}
+		}
+	}
+	.popup {
+		width: 410px;
+		.popup__btn {
+			width: 35%;
+		}
+	}
+}
+
+// LARGE===============
+
+@media (min-width: 992px) {
+	.contact__desktop-box {
+		position: relative;
+		flex-direction: column;
+		min-height: 65vh;
+
+		.contact__adress {
+			width: 50%;
+			height: 260px;
+			margin: 2.6em 0em 0em auto;
+
+			.contact__navbar-brand {
+				flex-direction: column;
+				text-align: center;
+				color: $dark;
+				text-decoration: none;
+				font-style: italic;
+				letter-spacing: 0.3em;
+				img {
+					margin: auto;
+					width: 35px;
+				}
+			}
+
+			.price-list-img{
+				display: none;
+			}
+		
+			.contact__adress-data {
+				margin: 1em 0em 0em 1em;
+				background-color: transparent;
+				font-size: 1.1rem;
+				letter-spacing: 0.2em;
+				line-height: 0.5em;
+				box-shadow: none;
+				border: 1px solid $brown;
+				border-style: dashed;
+			}
+
+			#map {
+				transform: translate(-90%, -100%);
+				width: 530px;
+				height: 450px;
+			}
+
+			.contact__btn {
+				width: 230px;
+				height: 58px;
+				left: 10%;
+				top: 203%;
+			}
+		}
+
+		.open-days {
+			position: relative;
+			min-width: 27%;
+			left: 26%;
+			margin: -1em auto 8em;
+			font-size: 1.1rem;
+			letter-spacing: 0.2em;
+
+			.day,
+			.hour {
+				margin-bottom: 0.4em;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.contact__box {
+		.contact__form {
+			&-item {
+				display: flex;
+				flex-direction: column;
+				.labels {
+					display: flex;
+					justify-content: center;
+					align-items: baseline;
+					.optional {
+						margin-left: 5.8em;
+						color: $dark;
+					}
+					.email-error {
+						margin-left: 0;
+					}
+					.number-error {
+						margin-left: 0.3em;
+					}
+					.name-error {
+						margin-left: 0em;
+					}
+					.message-error {
+						margin-left: .4em;
+					}
+					.mail {
+						left: 15%;
+					}
+				}
+				.contact__form-item-number {
+					display: flex;
+					align-items: baseline;
+					justify-content: center;
+
+					.number {
+						margin: 0em 0em auto;
+						position: relative;
+						left: 25%;
+					}
+				}
+				label {
+					position: relative;
+					margin: 0em 2.4em 0em 0em;
+					left: 14%;
+				}
+			}
+		}
+	}
+}
+
+// EXTRA EXTRA LARGE ==================
+
+@media (min-width: 1400px) {
+	.contact__desktop-box {
+		min-height: 78vh;
+		.contact__adress {
+			width: 55%;
+			height: 312px;
+			margin-top: 65px;
+			.contact__navbar-brand {
+				font-size: 1.3rem;
+				img {
+					width: 45px;
+				}
+			}
+			.contact__adress-data {
+				font-size: 1.4rem;
+				line-height: 0.9em;
+			}
+
+			#map {
+				transform: translate(-100%, -92%);
+				width: 640px;
+				height: 560px;
+				margin-left: 10px;
+			}
+
+			.contact__btn {
+				top: 200%;
+				left: 50%;
+				width: 250px;
+				height: 62px;
+			}
+		}
+		.open-days {
+			width: 38%;
+			max-width: 535px;
+			left: 23%;
+			font-size: 1.3rem;
+			margin-top: 0.7em;
+			margin-bottom: 9em;
+			.day,
+			.hour {
+				margin-right: 1em;
+			}
+
+			.week {
+				display: flex;
+				justify-content: center;
+				margin-bottom: 1em;
+			}
+			.saturday,
+			.sunday {
+				display: flex;
+				justify-content: center;
+				margin-bottom: 1em;
+			}
+		}
+	}
+}

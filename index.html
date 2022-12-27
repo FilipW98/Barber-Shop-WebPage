@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberShop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,900&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d3231c159b.js" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw-5Gy8k3M5h0maKjtNz_xfem7qLYeCM8"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+    
+<nav id="navbar" class="navbar navbar-expand-lg position-fixed top-0 w-100 py-0 ">
+    <div class="container">
+        <a class="navbar-brand p-1 ms-2 pt-md-3" href="#"><img src="/src/img/Vector.svg" class="w-50"   alt="scissors"> BEARD</a>
+        <button class="navbar-toggler p-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link text-center  ms-lg-5 my-md-3 active" aria-current="page" href="#about-us">O NAS</a>
+                <a class="nav-link text-center  ms-lg-5 my-md-3" href="#price-list">CENNIK</a>
+                <a class="nav-link text-center  ms-lg-5 my-md-3" href="#team">ZESPÓŁ</a>
+                <a class="nav-link text-center  ms-lg-5 my-md-3" target="_blank" href="./contact.html">KONTAKT</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<header id="#home" class="position-relative">
+    <div class="hero-img">
+        <div class="hero-shadow"></div>
+        <div class="hero-text"><span data-aos="fade-right" data-aos-offset="300" data-aos-duration="1000">BARBER</span>
+            <span data-aos="fade-left" data-aos-offset="300" data-aos-duration="1000">SHOP</span>
+            <p class="hero-note fs-5 text-center" data-aos="fade-up" data-aos-duration="1300">z pasją do strzyżenia!</p>
+        </div>
+
+
+    </div>
+
+
+    <a href="#price-list"><button class=" btn-offer d-lg-none"> OFERTA</button></a>
+    
+    <a href="#about-us" class="arrow d-none d-lg-block position-absolute"><img class="arrow-img"
+            src="./src/img/Farrow down.svg" alt="arrow"></a>
+
+</header>
+
+
+
+
+<section id="about-us" class="about-us  px-md-5 pt-5 position-relative  ">
+    <h2 class="about-us__title text-center fw-bold">POZNAJ <span class="position-relative">NAS <div class="underline"></div></span></h2>
+
+    <div class="container-fluid about-us__box d-lg-flex ">
+        <div class="about-us__text container ps-xxl-5  pe-0">
+        <p class="about-us__heading-text my-xl-0">Lorem ipsum dolor sit, amet consectetur.</p>
+        <p class="about-us__desc text-lg-start mt-xl-2 mb-5 mb-md-4 me-lg-0  ">Deserunt nisi asperiores nihil dolorem fuga. Laboriosam ipsum rem aperiam corrupti voluptatum magnam harum, quam, nemo consectetur, mollitia natus eum dolore dolores commodi repudiandae. Officiis aut minus dignissimos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nisi asperiores nihil dolorem fuga similique sint corporis voluptate laudantium ullam nulla nemo.</p>
+        <a href="#price-list"><button class="btn d-none d-md-block ">OFERTA</button></a>
+    </div>
+
+   <div class="container carousel-box">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./src/img/saloon-small.jpg" class="d-block w-100" alt="saloon">
+          </div>
+          <div class="carousel-item">
+            <img src="./src/img/chair-small.jpg" class="d-block w-100" alt="chair in saloon">
+          </div>
+          <div class="carousel-item">
+            <img src="./src/img/outside-small.jpg" class="d-block w-100" alt="saloon form outside">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden caorusel-icon">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+   </div>
+
+ 
+</div>
+
+</section>
+<section id="price-list" class="price-list py-5 position-relative">
+    <h2 class="price-list__title text-center fw-bold m-5">CENNIK <div class="underline"></div>
+    </h2>
+
+    <div class="price-list-container">
+        <img src="./src/img/Barbericon2.png" alt="." class="price-list-img mx-5 me-xxl-0">
+
+        <div class="container price-list__box m-xxl-0 p-5">
+            <div class="price-list__item my-0">
+                <p class="price-list__item-name">Podcinanie</p>
+                <p class="price-list__item-price">20zł</p>
+
+            </div>
+            <div class="price-list__item-underline mb-md-5"></div>
+
+            <div class="price-list__item my-0">
+                <p class="price-list__item-name">Stylowanie</p>
+                <p class="price-list__item-price">45zł</p>
+
+            </div>
+            <div class="price-list__item-underline mb-md-5"></div>
+
+            <div class="price-list__item my-0">
+                <p class="price-list__item-name">Ścinanie włosów</p>
+                <p class="price-list__item-price">50zł</p>
+
+            </div>
+            <div class="price-list__item-underline mb-md-5"></div>
+
+            <div class="price-list__item my-0">
+                <p class="price-list__item-name">Ścinanie + Stylowanie</p>
+                <p class="price-list__item-price">85zł</p>
+
+            </div>
+            <div class="price-list__item-underline mb-md-5"></div>
+
+            <div class="price-list__item mb-0">
+                <p class="price-list__item-name">Full Pack</p>
+                <p class="price-list__item-price">120zł</p>
+            </div>
+            <div class="price-list__item-underline mb-md-5"></div>
+
+
+        </div>
+        <img src="./src/img/Barbericon2.png" alt="." class="price-list-img mx-5 ms-xxl-0">
+    </div>
+
+<a href="./contact.html"> <button class="btn">UMÓW SIĘ</button></a>
+   
+
+</section>
+<section id="team" class="team px-xl-1 py-5">
+    <h2 class="team__heading text-center fw-bold">NASZ <span class="position-relative">ZESPÓŁ<div class="underline">
+            </div></span></h2>
+
+
+    <div class="container team__box">
+
+        <div class="row">
+
+            <div class="team__item col-lg-4 my-5 my-lg-0 ms-xxl-0">
+
+                <img src="./src/img/person1-small.jpg" alt="" class="team__item-img mt-5 mb-4">
+
+                <div class="team__item-card py-5 px-2">
+                    <h3 class="team__item-name">Kamil</h3>
+                    <div class="underline"></div>
+                    <p class="team__item-text my-5 ps-5 pe-1 pe-md-3">Lorem ipsum dolor, sit amet consectetur
+                        adipisicing elit.
+                        Dolores, ipsam quod officiis magni a ea esse reiciendis pariatur praesentium.</p>
+                        <a href="./contact.html"><button class="team-btn">WYBIERZ</button></a>
+                    
+                </div>
+            </div>
+
+            <div class="team-underline"></div>
+
+            <div class="team__item col-lg-4">
+
+                <img src="./src/img/person2-small.jpg" alt="" class="team__item-img my-4 mt-sm-5">
+
+                <div class="team__item-card py-5 px-2 mb-5">
+                    <h3 class="team__item-name">Piotr</h3>
+                    <div class="underline"></div>
+                    <p class="team__item-text my-5 ps-5 pe-md-3">Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                        Dolores, ipsam quod officiis magni a ea esse reiciendis pariatur praesentium.</p>
+                        <a href="./contact.html"><button class="team-btn">WYBIERZ</button></a>
+                </div>
+
+            </div>
+
+            <div class="team-underline"></div>
+
+            <div class="team__item col-lg-4 me-xxl-0">
+
+                <img src="./src/img/person3-small.jpg" alt="" class="team__item-img mb-4 my-4 mt-sm-5">
+
+                <div class="team__item-card py-5 px-2 mb-5">
+                    <h3 class="team__item-name">Adam</h3>
+                    <div class="underline"></div>
+                    <p class="team__item-text my-5 ps-5 pe-md-3">Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit.
+                        Dolores, ipsam quod officiis magni a ea esse reiciendis pariatur praesentium.</p>
+                        <a href="./contact.html"><button class="team-btn">WYBIERZ</button></a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</section>
+<footer id="footer" class="p-5">
+    <div class="container-fluid">
+<div class="row">
+    <div class="footer__logo-icons col-lg-4 text-center">
+        <a class="navbar-brand p-1 ms-2 pt-md-3" href="#"><img src="/src/img/Vector.svg" class="w-25" alt="scissors"> BEARD</a>
+        <div class="footer-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i> 
+        </div>
+    </div>
+    <p class="designer text-center col-lg-4">Filipw98Design</p>
+    <div class="footer__adress col-lg-4 text-center">
+        <p>WROCŁAW</p>
+        <p>WARSZAWSKA 23</p>
+        <p class="number"><i class="fas fa-phone-alt"></i>122 541 081</p>
+        <p>BARBER@WP.PL</p>
+    </div>
+</div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+    
+<script src="/dist/js/script.min.js"></script>
+</body>
+</html>

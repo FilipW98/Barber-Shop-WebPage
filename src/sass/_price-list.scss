@@ -1,0 +1,122 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+.price-list {
+	min-height: 100vh;
+	background-color: $dark;
+
+	&__title {
+		color: $cream-white;
+		letter-spacing: 0.2em;
+		.underline {
+			@include underline-div;
+		}
+	}
+
+.price-list-img {
+    display:none;
+}
+	&__box {
+		background-color: rgba(217, 217, 217, 0.04);
+        box-shadow: 1px 1px 8px 2px  rgb(20, 20, 20);
+		border-radius: 15px;
+        .price-list__item-underline{
+            margin-bottom: 2em;
+        }
+	}
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		letter-spacing: 0.1em;
+		font-family: 'Source Sans Pro';
+		color: $cream-white;
+        
+        &-name,&-price{
+            margin-bottom: 0em;
+        }
+        &-underline{
+            width: 100%;
+            margin-bottom: 1.2em;
+            height: 2px;
+            background-color: $brown;
+
+        }
+	}
+
+	.btn {
+		@include styledBtn;
+        font-family: 'Source Sans Pro';
+        top: 86%;
+        font-size: 1.3rem;
+        box-shadow: 1px 1px 8px 3px  rgb(59, 43, 19);
+	}
+    .btn:hover {
+        background-color: rgb(143, 88, 17);
+
+    }
+}
+
+@media (min-width: 768px) {
+	.price-list {
+        min-height: 94vh;
+
+        &__title{
+            font-size: 2.2rem;
+        }
+
+		&__item {
+			margin-bottom: 1.2em;
+			letter-spacing: 0.1em;
+			font-size: 1.5rem;
+		}
+	}
+}
+
+
+@media (min-width: 992px) {
+	.price-list {
+	min-height: 95vh;
+        &__title{
+            font-size: 2.5rem;
+        }
+
+        .price-list-container{
+            display: flex;
+        }
+
+        .price-list-img{
+            display: block;
+            height: 450px;
+
+        } 
+
+        &__box{
+            max-width: 700px;
+        }
+
+		&__item {
+			letter-spacing: 0.1em;
+			font-size: 1.4rem;
+		}
+        .btn {
+            top: 85%;
+            width: 220px;
+            font-size: 1.3rem;
+        }
+	}
+}
+
+
+@media (min-width: 1400px) {
+	.price-list {
+        .price-list-container{
+         justify-content: space-evenly;
+        }
+        .price-list-img{
+            height: 450px;
+        } 
+	}
+}
+
+
+

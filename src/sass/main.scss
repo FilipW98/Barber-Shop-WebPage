@@ -1,0 +1,46 @@
+@use 'colors' as *; 
+@use 'nav' as *;
+@use 'header' as *;
+@use 'about-us' as *;
+@use 'price-list' as *;
+@use 'team' as *;
+@use 'footer' as *;
+@use 'contact' as *;
+@use 'animations' as *;
+@use 'mixins' as *;
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+	// font-size: 62.5%;
+	scroll-behavior: smooth;
+    scroll-padding-top: 107px;
+
+}
+
+body{
+    // position: relative;
+    font-family: 'Source Sans Pro','Playfair Display', sans-serif;
+	// font-size: 1.6rem;
+    background-color: $main-bgc;
+}
+
+.btn:hover {
+	background-color: $brown;
+	border: 2px solid rgba(0, 0, 0, 0.514);
+	color: $cream-white;
+}
+
+.btn::before {
+	@include before-after;
+	border-radius: 10px;
+}
+
+.btn:hover::before {
+	border: 2px solid $brown;
+	animation: btnBorder 1s;
+}

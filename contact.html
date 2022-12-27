@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberShop - kontakt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,900&family=Source+Sans+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d3231c159b.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+    <nav id="navbar" class="navbar navbar-expand-lg position-fixed top-0 w-100 py-0 ">
+        <div class="container">
+            <a class="navbar-brand p-1 ms-2 pt-md-3" href="./index.html"><img src="/src/img/Vector.svg" class="w-50"
+                    alt="scissors"> BEARD</a>
+            <button class="navbar-toggler p-4" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link text-center  ms-lg-5 my-md-3 active" aria-current="page" href="./index.html">O
+                        NAS</a>
+                    <a class="nav-link text-center  ms-lg-5 my-md-3" href="./index.html">CENNIK</a>
+                    <a class="nav-link text-center  ms-lg-5 my-md-3" href="./index.html">ZESPÓŁ</a>
+                    <a class="nav-link text-center  ms-lg-5 my-md-3" href="./contact.html">KONTAKT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="#home" class="contact-header position-relative">
+        <div class="contact__hero-img">
+            <div class="hero-shadow"></div>
+            <div class="hero-text">
+                KONTAKT
+                <div class="contact-underline"></div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class=" row contact__desktop-box mb-5">
+
+
+        <div class="container contact__adress position-relative">
+            <a class="contact__navbar-brand d-none d-lg-flex p-1 pt-md-3 fw-bold" href="#">         
+                <img src="/src/img/dark-scissors.svg" alt="scissors"> BEARD</a>
+
+         <div class="container contact__tablets">
+            <img src="./src/img/Barbericon2.png" alt="." class="price-list-img">
+            <div class="contact__adress-data text-center">
+                <p>WROCŁAW</p>
+                <p>WARSZAWSKA 23</p>
+                <p class="number"><i class="fas fa-phone-alt"></i> 122 541 081</p>
+                <p class="mb-lg-0">BARBER@WP.PL</p>
+            </div>
+            <img src="./src/img/Barbericon2.png" alt="." class="price-list-img">
+         </div>
+
+            <a href="#contact-form"> <button class="contact__btn">UMÓW SIĘ</button></a>
+
+
+
+            <div id="map">
+                <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw-5Gy8k3M5h0maKjtNz_xfem7qLYeCM8&callback=initMap"></script>
+            </div>
+
+
+        </div>
+
+        <div class="container open-days text-center">
+
+            <div class="week">
+                <p class="day">PONIEDZIAŁEK - PIĄTEK</p>
+                <p class="hour">9:00 - 19:00</p>
+            </div>
+            <div class="saturday">
+                <p class="day">SOBOTA</p>
+                <p class="hour">11:00 - 17:00</p>
+            </div>
+            <div class="sunday">
+                <p class="day">NIEDZIELA</p>
+                <span>NIECZYNNE</span>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="contact-form" class="d-lg-inline-block contact__form-title">
+        <h2 class="contact__form-title text-center">FORMULARZ KONTAKTOWY<div class="underline"></div>
+        </h2>
+    </div>
+    
+    
+    
+    <div class="popup__shadow">
+        <div class="popup">
+            <p>Wiadomość została wysłana <i class="fas fa-check"></i></p>
+            <button class="popup__btn">OK</button>
+        </div>
+    </div>
+    <div class="container contact__box ">
+
+        <div class="row mt-5">
+
+            <div class="container contact__form position-relative">
+
+                <div class="contact__form-item">
+                    <div class="labels">
+                        <label class="mb-xl-1" for="user-name">Imię i nazwisko:</label>
+                        <p class="name-error">Musisz podać imię i nazwisko</p>
+                    </div>
+                    <input type="text" id="full-name">
+                </div>
+
+                <div class="contact__form-item">
+                    <div class="labels">
+                        <label class=" mail mb-xl-1" for="e-mail">Adres e-mail:</label>
+                        <p class="email-error">Muszisz podać adres e-mail</p>
+                    </div>
+                    <input type="text" id="e-mail">
+
+                </div>
+
+                <div class="contact__form-item  my-xxl-4">
+                    <div class="labels">
+                        <div class="contact__form-item-number text-center">
+
+                            <label class="mb-0 mb-lg-1 number" for="number">Numer telefonu:</label>
+                            <p class=" optional text-center text-lg-start mb-lg-1">(opcjonalnie)</p>
+                        </div>
+                        <p class="number-error">Numer telefonu jest niepoprawny</p>
+                    </div>
+
+
+
+                    <input type="number" id="number">
+
+                </div>
+
+                <div class="contact__form-item my-xxl-4">
+                    <div class="labels">
+                        <label for="message" class="mb-xl-1 me-xl-5">Napisz wiadomość:</label>
+                        <p class="message-error">Musisz podać jakąś treść</p>
+                    </div>
+                    <textarea id="message"></textarea>
+
+                </div>
+                <button id="send-btn" class="contact__btn">WYŚLIJ</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer id="footer" class="p-5">
+    <div class="container-fluid">
+<div class="row">
+    <div class="footer__logo-icons col-lg-4 text-center">
+        <a class="navbar-brand p-1 ms-2 pt-md-3" href="#"><img src="/src/img/Vector.svg" class="w-25" alt="scissors"> BEARD</a>
+        <div class="footer-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i> 
+        </div>
+    </div>
+    <p class="designer text-center col-lg-4">Filipw98Design</p>
+    <div class="footer__adress col-lg-4 text-center">
+        <p>WROCŁAW</p>
+        <p>WARSZAWSKA 23</p>
+        <p class="number"><i class="fas fa-phone-alt"></i>122 541 081</p>
+        <p>BARBER@WP.PL</p>
+    </div>
+</div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="/dist/js/script.min.js"></script>
+</body>
+
+</html>

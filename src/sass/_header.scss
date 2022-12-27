@@ -1,0 +1,106 @@
+@use 'colors' as *;
+@use 'animations' as *;
+@use 'mixins' as *;
+
+.hero-img {
+	position: relative;
+	min-height: 100vh;
+	background-image: url('/src/img/barber-heroimg1.jpg');
+	background-position: center;
+}
+.hero-shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.61);
+	z-index: 1;
+}
+
+.hero-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	color: $cream-white;
+	z-index: 3;
+	font-weight: 400;
+	font-size: 3.6rem;
+	text-align: end;
+	letter-spacing: 0.25em;
+	font-family: 'Playfair Display';
+	text-shadow: 0px 4px 4px #000000;
+}
+
+.hero-note {
+	font-family: Source Sans Pro;
+	letter-spacing: 0.18em;
+	color: rgba(255, 255, 255, 0.774);
+}
+
+.btn-offer {
+	@include styledBtn;
+	background-color: rgba(108, 67, 17, 0.65);
+	background-color: $brown;
+	width: 230px;
+	height: 70px;
+	transition: .3s;
+}
+
+.btn-offer:hover{
+	transform: scale(1.1) translate(-45%);
+}
+
+.btn-offer::before {
+	@include before-after;
+	border-radius: 10px;
+}
+
+.btn-offer:hover::before {
+	border: 2px solid $brown;
+	animation: btnBorder 1s;
+}
+
+
+.arrow-img {
+	width: 90px;
+}
+
+.arrow {
+	top: 85%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	z-index: 5;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.arrow::before {
+	@include before-after;
+	border-radius: 50%;
+	border: 2px solid $cream-white;
+	animation: arrowAnimation 2.3s infinite;
+}
+
+@media (min-width: 768px) {
+	.btn {
+		width: 300px;
+		height: 80px;
+		font-size: 1.8rem;
+	}
+	.hero-text{
+	font-size: 4.9rem;
+	}
+}
+
+@media (min-width: 992px) {
+
+	.hero-text{
+		font-size: 5.9rem;
+		}
+
+}

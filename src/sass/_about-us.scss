@@ -1,0 +1,187 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+.about-us {
+	min-height: 83vh;
+
+	&__box {
+		margin: 60px 0px 0px 0px;
+	}
+	&__title {
+		letter-spacing: 0.2em;
+		span {
+			color: $brown;
+		}
+
+		.underline {
+			@include underline-div;
+			width: 40px;
+		}
+	}
+	&__text {
+		font-family: 'Source Sans Pro';
+	}
+
+	.about-us__heading-text {
+		color: $brown;
+	}
+	.about-us__desc {
+		line-height: 1.7em;
+	}
+}
+
+.carousel-box{
+	max-width: 450px;
+}
+
+.carousel {
+	max-width: 450px;
+	.carousel-control-prev,
+	.carousel-control-next {
+		color: black;
+		opacity: 1;
+		.carousel-control-prev-icon,
+		.carousel-control-next-icon {
+			background-color: rgba(0, 0, 0, 0.644);
+			border-radius: 50%;
+		}
+	}
+}
+.carousel-inner {
+	border-radius: 8px;
+	box-shadow: 9px 14px 5px rgba(73, 49, 49, 0.22);
+	img {
+		width: 400px;
+		height: 250px;
+	}
+}
+
+@media (min-width: 768px) {
+	.about-us {
+		min-height: 97vh;
+		&__box {
+			margin: 80px 0px 0px 0px;
+		}
+		&__title {
+			font-size: 2.2rem;
+			.underline {
+				width: 45px;
+			}
+		}
+
+		.about-us__desc,
+		.about-us__heading-text {
+			line-height: 1.9em;
+			font-size: 1.1rem;
+			max-width: 65%;
+			margin: 0em auto;
+		}
+		.carousel {
+			max-width: 450px;
+		}
+		.btn {
+			@include styledBtn;
+			top: 87%;
+			box-shadow: 1px 2px 4px 1px  rgb(59, 43, 19);
+		}
+		.btn:hover {
+			background-color: rgb(143, 88, 17);
+
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.about-us {
+		min-height: 75vh;
+
+		&__text {
+			position: relative;
+			height: 360px;
+
+		}
+		.about-us__heading-text {
+
+			max-width: 65%;
+
+		}
+		.about-us__desc {
+			line-height: 1.5em;
+			font-size: 1rem;
+			max-width: 83%;
+
+		}
+		.about-us__box {
+			flex-direction: row-reverse;
+		}
+		.carousel {
+			min-width: 470px;
+			.carousel-item {
+				img {
+					min-height: 350px;
+				}
+			}
+		}
+
+		.btn {
+			@include styledBtn;
+			margin-top: 0.3em;
+			top: 81%;
+			height: 58px;
+			// font-size: 1rem
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.about-us {
+		.about-us__desc,
+		.about-us__heading-text {
+			line-height: 1.6em;
+			font-size: 1.2rem;
+		}
+
+		.carousel {
+			max-width: 550px;
+			.carousel-item {
+				img {
+					min-height: 350px;
+				}
+			}
+		}
+
+		.btn {
+			width: 220px;
+			bottom: 10px;
+			margin-top: 15px;
+			top: 78%;
+
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.about-us {
+		.about-us__desc,
+		.about-us__heading-text {
+			margin-left: 120px;
+		}
+		.about-us__text {
+			max-width: 695px;
+		}
+		.btn {
+			width: 235px;
+			margin-top: 5px;
+		}
+
+		.carousel {
+			min-width: 650px;
+			.carousel-item {
+				img {
+					min-height: 390px;
+					min-width: 590px;
+				}
+			}
+		}
+	}
+}
