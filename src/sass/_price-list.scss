@@ -2,7 +2,7 @@
 @use 'mixins' as *;
 
 .price-list {
-	min-height: 85vh;
+	min-height: 98vh;
 	background-color: $dark;
 
 	&__title {
@@ -46,7 +46,7 @@
 	.btn {
 		@include styledBtn;
         font-family: 'Source Sans Pro';
-        // top: 86%;
+        top: 83%;
         font-size: 1.3rem;
         box-shadow: 1px 1px 8px 3px  rgb(59, 43, 19);
 	}
