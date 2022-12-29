@@ -118,51 +118,56 @@
 
         <div class="row mt-5">
 
-            <div class="container contact__form position-relative">
+            <form action="https://formsubmit.co/filip.wozniak98@wp.pl" method="POST">
+                <!-- <input type="hidden" name="_next" value="http://localhost:3000/.html"> -->
+                <input type="hidden" name="_captcha" value="false">
+                <div class="container contact__form position-relative">
 
-                <div class="contact__form-item">
-                    <div class="labels">
-                        <label class="mb-xl-1" for="user-name">Imię i nazwisko:</label>
-                        <p class="name-error">Musisz podać imię i nazwisko</p>
-                    </div>
-                    <input type="text" id="full-name">
-                </div>
-
-                <div class="contact__form-item">
-                    <div class="labels">
-                        <label class=" mail mb-xl-1" for="e-mail">Adres e-mail:</label>
-                        <p class="email-error">Muszisz podać adres e-mail</p>
-                    </div>
-                    <input type="text" id="e-mail">
-
-                </div>
-
-                <div class="contact__form-item  my-xxl-4">
-                    <div class="labels">
-                        <div class="contact__form-item-number text-center">
-
-                            <label class="mb-0 mb-lg-1 number" for="number">Numer telefonu:</label>
-                            <p class=" optional text-center text-lg-start mb-lg-1">(opcjonalnie)</p>
+                    <div class="contact__form-item">
+                        <div class="labels">
+                            <label class="mb-xl-1" for="user-name">Imię i nazwisko:</label>
+                            <p class="name-error">Musisz podać imię i nazwisko</p>
                         </div>
-                        <p class="number-error">Numer telefonu jest niepoprawny</p>
+                        <input type="text" id="full-name" name="Imię" required>
                     </div>
-
-
-
-                    <input type="number" id="number">
-
-                </div>
-
-                <div class="contact__form-item my-xxl-4">
-                    <div class="labels">
-                        <label for="message" class="mb-xl-1 me-xl-5">Napisz wiadomość:</label>
-                        <p class="message-error">Musisz podać jakąś treść</p>
+    
+                    <div class="contact__form-item">
+                        <div class="labels">
+                            <label class=" mail mb-xl-1" for="e-mail">Adres e-mail:</label>
+                            <p class="email-error">Muszisz podać adres e-mail</p>
+                        </div>
+                        <input type="email" id="e-mail" name="e-mail" required>
+    
                     </div>
-                    <textarea id="message"></textarea>
-
+    
+                    <div class="contact__form-item  my-xxl-4">
+                        <div class="labels">
+                            <div class="contact__form-item-number text-center">
+    
+                                <label class="mb-0 mb-lg-1 number" for="number">Numer telefonu:</label>
+                                <p class=" optional text-center text-lg-start mb-lg-1">(opcjonalnie)</p>
+                            </div>
+                            <p class="number-error">Numer telefonu jest niepoprawny</p>
+                        </div>
+    
+    
+    
+                        <input type="number" id="number" name="Telefon">
+    
+                    </div>
+    
+                    <div class="contact__form-item my-xxl-4">
+                        <div class="labels">
+                            <label for="message" class="mb-xl-1 me-xl-5">Napisz wiadomość:</label>
+                            <p class="message-error">Musisz podać jakąś treść</p>
+                        </div>
+                        <textarea id="message" name="Wiadomość" required></textarea>
+    
+                    </div>
+                    <button id="send-btn" class="contact__btn" type="submit">WYŚLIJ</button>
                 </div>
-                <button id="send-btn" class="contact__btn">WYŚLIJ</button>
-            </div>
+            </form>
+
         </div>
     </div>
 
