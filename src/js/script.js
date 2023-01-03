@@ -2,6 +2,9 @@ const navBtn = document.querySelector('.navbar-toggler');
 const nav = document.querySelector('nav');
 const body = document.querySelector('body');
 
+const navBar = document.querySelector('#navbarNavAltMarkup');
+const allNavItems = document.querySelectorAll('.nav-link');
+
 // CONTACT FORM
 const nameInput = document.querySelector('#full-name');
 const emailInput = document.querySelector('#e-mail');
@@ -17,9 +20,18 @@ const messageError = document.querySelector('.message-error');
 const popupBtn = document.querySelector('.popup__btn');
 const popupShadow = document.querySelector('.popup__shadow');
 
-const navMobileShadow = () => {
-	nav.classList.toggle('show');
-};
+
+
+const toggleNav = () => {
+	body.classList.toggle('no-scroll')
+	allNavItems.forEach(item => {
+		item.addEventListener('click', ()=> {
+			navBar.classList.remove('show')
+			body.classList.remove('no-scroll')
+		})   
+	})
+}
+
 
 
 const closePopup = () => {
@@ -98,7 +110,7 @@ const sendData = () => {
 
 sendBtn.addEventListener('click', sendData);
 popupBtn.addEventListener('click', closePopup);
-navBtn.addEventListener('click', navMobileShadow);
+navBtn.addEventListener('click', toggleNav);
 
 
 
