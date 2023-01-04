@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./dist/css/main.min.css">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navbar">
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-contact="active" id="contact">
     <nav id="navbar" class="navbar navbar-expand-lg position-fixed top-0 w-100 py-0 ">
         <div class="container">
             <a class="navbar-brand p-1 ms-2 pt-md-3" href="./index.html"><img src="./src/img/Vector.svg" class="w-50"
@@ -52,12 +52,12 @@
 
 
 
-    <div class=" row contact__desktop-box mb-5">
+   <div class=" row contact__desktop-box mb-5">
 
 
         <div class="container contact__adress position-relative">
             <a class="contact__navbar-brand d-none d-lg-flex p-1 pt-md-3 fw-bold" href="#">         
-                <img src="/src/img/dark-scissors.svg" alt="scissors"> BEARD</a>
+                <img src="./src/img/dark-scissors.svg" alt="scissors"> BEARD</a>
 
          <div class="container contact__tablets">
             <img src="./src/img/Barbericon2.png" alt="barber figure" class="price-list-img">
@@ -98,7 +98,7 @@
             </div>
 
         </div>
-    </div>
+    </div> 
 
 
     <div id="contact-form" class="d-lg-inline-block contact__form-title">
@@ -114,13 +114,11 @@
             <button class="popup__btn">OK</button>
         </div>
     </div>
-    <div class="container contact__box ">
+    
+    <div class="container contact__box">
 
         <div class="row mt-5">
 
-            <form action="https://formsubmit.co/filip.wozniak98@wp.pl" method="POST">
-                <!-- <input type="hidden" name="_next" value="http://localhost:3000/.html"> -->
-                <input type="hidden" name="_captcha" value="false">
                 <div class="container contact__form position-relative">
 
                     <div class="contact__form-item">
@@ -166,7 +164,7 @@
                     </div>
                     <button id="send-btn" class="contact__btn" type="submit">WYŚLIJ</button>
                 </div>
-            </form>
+       
 
         </div>
     </div>
