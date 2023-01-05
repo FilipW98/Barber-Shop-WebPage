@@ -1,4 +1,6 @@
 const navBtn = document.querySelector('.navbar-toggler');
+const navbarBrand = document.querySelector('.navbar-brand');
+
 const nav = document.querySelector('nav');
 const body = document.querySelector('body');
 
@@ -29,6 +31,9 @@ const navMobileShadow = () => {
 			navbar.classList.remove('show');
 		});
 	});
+	navbarBrand.addEventListener('click', () => {
+		navbar.classList.remove('show');
+	})
 };
 
 const closePopup = () => {
