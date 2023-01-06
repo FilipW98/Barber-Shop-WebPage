@@ -16,21 +16,22 @@
 }
 
 html {
-	// font-size: 62.5%;
 	scroll-behavior: smooth;
     scroll-padding-top: 107px;
-
 }
 
 body{
-    // position: relative;
     font-family: 'Source Sans Pro','Playfair Display', sans-serif;
-	// font-size: 1.6rem;
     background-color: $main-bgc;
 }
 
+.btn{
+	@include styledBtn;
+	transition: .3s;
+}
+
 .btn:hover {
-	background-color: $brown;
+	background-color: $light-brown;
 	border: 2px solid rgba(0, 0, 0, 0.514);
 	color: $cream-white;
 }

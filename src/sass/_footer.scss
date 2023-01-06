@@ -38,6 +38,9 @@ footer {
 		letter-spacing: 0.3em;
 		.number {
 			color: $light-blue;
+			.fa-phone-alt {
+				transform: rotate(100deg);
+			}
 		}
 	}
 }

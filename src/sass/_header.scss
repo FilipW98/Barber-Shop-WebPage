@@ -43,9 +43,6 @@
 }
 
 .btn-offer {
-	@include styledBtn;
-	background-color: rgba(108, 67, 17, 0.65);
-	background-color: $brown;
 	width: 230px;
 	height: 70px;
 	transition: .3s;
@@ -53,12 +50,7 @@
 
 .btn-offer:hover{
 	transform: scale(1.1) translate(-45%);
-	color: white;
-}
-
-.btn-offer::before {
-	@include before-after;
-	border-radius: 10px;
+	background-color:$light-brown;
 }
 
 .btn-offer:hover::before {

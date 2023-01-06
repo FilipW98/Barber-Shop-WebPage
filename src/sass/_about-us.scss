@@ -59,8 +59,18 @@
 @media (min-width: 768px) {
 	.about-us {
 		min-height: 91vh;
-		&__box {
+		.about-us__box {
+			display: flex;
+			flex-direction: column;
 			margin: 80px 0px 0px 0px;
+		.btn {
+				position: absolute;
+				margin-top: 3em;
+			}
+			.carousel {
+				max-width: 450px;
+				margin-bottom: 6em;
+			}
 		}
 		&__title {
 			font-size: 2.2rem;
@@ -76,18 +86,7 @@
 			max-width: 65%;
 			margin: 0em auto;
 		}
-		.carousel {
-			max-width: 450px;
-		}
-		.btn {
-			@include styledBtn;
-			top: 87%;
-			box-shadow: 1px 2px 4px 1px  rgb(59, 43, 19);
-		}
-		.btn:hover {
-			background-color: rgb(143, 88, 17);
 
-		}
 	}
 }
 
@@ -95,24 +94,26 @@
 	.about-us {
 		min-height: 75vh;
 
-		&__text {
-			position: relative;
-			height: 360px;
-
+		.about-us__box {
+			flex-direction: row-reverse;
+			.btn {
+				position: relative;
+				top: 0%;
+			}
+			.about-us__text {
+				position: relative;
+				height: 360px;
+			}
 		}
+
 		.about-us__heading-text {
-
 			max-width: 65%;
-
 		}
 		.about-us__desc {
 			line-height: 1.5em;
 			font-size: 1rem;
 			max-width: 83%;
 
-		}
-		.about-us__box {
-			flex-direction: row-reverse;
 		}
 		.carousel {
 			min-width: 470px;
@@ -123,13 +124,7 @@
 			}
 		}
 
-		.btn {
-			@include styledBtn;
-			margin-top: 0.3em;
-			top: 81%;
-			height: 58px;
-			// font-size: 1rem
-		}
+
 	}
 }
 
@@ -152,10 +147,6 @@
 
 		.btn {
 			width: 220px;
-			bottom: 10px;
-			margin-top: 15px;
-			top: 78%;
-
 		}
 	}
 }
@@ -166,14 +157,11 @@
 		.about-us__heading-text {
 			margin-left: 120px;
 		}
-		.about-us__text {
-			max-width: 695px;
+		.about-us__box{
+			.about-us__text {
+				max-width: 695px;
+			}
 		}
-		.btn {
-			width: 235px;
-			margin-top: 5px;
-		}
-
 		.carousel {
 			min-width: 650px;
 			.carousel-item {
