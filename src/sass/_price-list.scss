@@ -2,7 +2,6 @@
 @use 'mixins' as *;
 
 .price-list {
-	min-height: 98vh;
 	background-color: $dark;
 
 	&__title {
@@ -42,11 +41,10 @@
 			background-color: $brown;
 		}
 	}
-
 	.btn {
 		@include styledBtn;
-		font-family: 'Source Sans Pro';
-		top: 82%;
+		position: relative;
+		margin-top: 2em;
 		font-size: 1.3rem;
 		box-shadow: 1px 1px 8px 3px rgb(59, 43, 19);
 	}
@@ -57,11 +55,6 @@
 
 @media (min-width: 768px) {
 	.price-list {
-		min-height: 94vh;
-
-		.btn {
-			top: 82%;
-		}
 		&__title {
 			font-size: 2.2rem;
 		}
@@ -76,17 +69,19 @@
 
 @media (min-width: 992px) {
 	.price-list {
-		min-height: 95vh;
+		min-height: 87vh;
 		&__title {
 			font-size: 2.5rem;
 		}
 
-		.price-list-container {
+		.price-list__container {
 			display: flex;
+			position: relative;
 		}
 
 		.price-list-img {
 			display: block;
+			margin-top: 2em;
 			height: 450px;
 		}
 
@@ -99,7 +94,6 @@
 			font-size: 1.4rem;
 		}
 		.btn {
-			top: 85%;
 			width: 220px;
 			font-size: 1.3rem;
 		}
@@ -108,7 +102,7 @@
 
 @media (min-width: 1400px) {
 	.price-list {
-		.price-list-container {
+		.price-list__container {
 			justify-content: space-evenly;
 		}
 		.price-list-img {
