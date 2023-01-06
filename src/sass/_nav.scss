@@ -29,11 +29,14 @@ nav {
 		letter-spacing: 0.2em;
 		font-size: 1.2rem;
 	}
+	.nav-link:focus{
+		color: $cream-white;
+	}
 
 
 	img {
 		height: 40px;
-		margin-left: 22px;
+		margin: auto;
 	}
 
 	.navbar-toggler {
