@@ -129,6 +129,9 @@ margin: 0;
 			top: 83%;
 			background-color: rgb(56, 51, 49);
 		}
+		.btn:hover{
+			background-color: $dark;
+		}
 	.contact__form-item.error{
 		.labels{
 			.name-error, .email-error, .message-error, .number-error {
