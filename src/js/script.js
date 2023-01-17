@@ -23,7 +23,6 @@ const popupBtn = document.querySelector('.popup__btn');
 const popupShadow = document.querySelector('.popup__shadow');
 
 
-
 const navMobileShadow = () => {
 	nav.classList.toggle('show');
 	allNavLinks.forEach(item => {
