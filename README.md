@@ -4,9 +4,10 @@
 
 <div align="center">
 This is my first project that I designed in terms of graphics and then programmed. <br>
-- I used Figma to create a mockup of the website, which I followed when writing the code.  <br>
-- The website is a showcase of the barber shop. <br>
-- The website includes: a price list, an about us section, a section with the barber shop's team and a contact form in the subpage.
+- I used Figma to create a mockup of the website, which I followed when writing the code <br>
+- The website is a showcase of the barber shop <br>
+- The website includes: a price list, an about us section, our team section and a contact form in the subpage <br>
+- This page is adapted to mobile devices (Responsove Web Design)
 </div>
 
 
