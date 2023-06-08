@@ -11,7 +11,6 @@ This is my first project that I designed in terms of graphics and then programme
 </div>
 
 
-## Live:  https://filipw98.github.io/Barber-Shop-WebPage/
 
 
 ## Tech Stack
@@ -20,6 +19,6 @@ This is my first project that I designed in terms of graphics and then programme
 <a href="https://sass-lang.com/" target="_blank" rel="noreferrer"> <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Sass.svg" alt="Sass icon" width="47" height="47"/> </a> 
 <a href="https://gulpjs.com/" target="_blank" rel="noreferrer"> <img src="https://github.com/tandpfun/skill-icons/blob/main/icons/Gulp.svg" alt="Gulp icon" width="47" height="47"/> </a> 
 
+### Live:  https://filipw98.github.io/Barber-Shop-WebPage/
 
 
-## Screenshots
